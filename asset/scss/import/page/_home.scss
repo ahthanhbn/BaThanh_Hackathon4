@@ -1,0 +1,239 @@
+.home{
+    max-width: 1440px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: var(--white);
+    .header{
+        .header__top{
+            position: sticky;
+            top: 0;
+            z-index: 2;
+            @include flex($y:space-between);
+            padding: 30px 60px;
+            .header__logo{
+                @include flex($gap:15px);
+                a{
+                    padding: 8px 10px;
+                    background-color: var(--blue);
+                    border-radius: 12px;
+                    @include a($fs:20px, $fw:800, $lh: normal, $color: var(--dark));
+                    
+                }
+                :nth-child(2){
+                    padding: 0;
+                    background-color: var(--white); 
+                } 
+            }
+            .header__middle{
+                @include flex($gap:40px);
+                .middle__item{
+                    @include txt($fs:16px, $fw:500, $lh: 24px, $color: var(--dark));
+                }
+                
+            }
+            .header__right{
+                @include flex($gap:15px);
+                .notifi{
+                    @include flex($gap:12px);
+                    a{
+                        @include a($fs:14px, $fw:700, $lh:21px, $color: var(--grey));
+                    }
+                    
+                }
+                .jamb{
+                    width: 1px;
+                    height: 32px;
+                    opacity: 0.5;
+                    background-color: var(--grey2);
+                }
+                .sign__in{
+                    width: 32px;
+                    height: 32px;
+                    flex-shrink: 0;
+                    img{
+                        @include img;
+                    }  
+                } 
+            }
+            
+        }
+        
+        .header__bottom{
+            @include flex($x: flex-start, $gap:34.12px);
+            .travel{
+                @include flex($column: column, $x:flex-start, $gap:70px, $y:flex-start);
+                padding-left: 134.88px;
+                position: relative;
+                .ormament{
+                    position: absolute;
+                    top: 125px;
+                    left: 356px;
+                    right: 94px;
+                    transform: translate(126px,0);
+                }
+                .eliment{
+                    position: absolute;
+                    left: 0;
+                    bottom: 60.29px;
+                    transform: rotate(-19.16 deg);
+                }
+                .travel__top{
+                    margin-top: 6.83px;
+                    .travel__heading{
+                        margin-bottom: 30px;
+                        h1{
+                            @include txt($fs:64px, $fw:800, $lh: normal, $color: var(--dark), $txt-tranf:capitalize);
+                            @include txt-truncate($line:2);
+                            span{
+                                color: #F5B318;
+                            }                            
+                        }
+                    }
+                    p{
+                        @include inline-block;
+                        @include txt($fs:18px, $fw:500, $lh: 28px, $color: var(--grey));
+                        @include txt-truncate($line:2);
+                        margin-bottom: 40px;
+                    } 
+                    .plan__trip{
+                        width: 317px;
+                        padding: 8px 8px 8px 44px;
+                        @include flex($gap:111px);
+                        border-radius: 31px;
+                        background: var(--white);
+                        box-shadow: -16px 22px 42px 0px rgba(0, 31, 77, 0.12);
+                        button{
+                            @include txt($fs:20px, $fw:700, $lh: normal, $color: var(--dark));
+                            white-space: nowrap;
+                        }
+                        a{
+                            @include inline-block;
+                            padding: 10px;
+                            background-color: var(--blue);
+                            border-radius: 30px;
+                        }
+                    }
+                }
+                .travel__bottom{
+                    @include flex($column: column, $gap:10px, $x: flex-start);
+                    p{
+                        @include txt($fs:16px, $fw:500, $lh: 24px, $color: var(--grey));
+                        
+                    }
+                    .travel__recomment{
+                        @include flex($x:flex-end);
+                        .recomment{
+                            @include flex($column: column, $gap:7px, $x: flex-start);
+                            h4{
+                                @include txt($fs:24px, $fw:500, $lh: 36px, $color: var(--dark2));  
+                            }
+                            .recomment__star{
+                                width: 106px;
+                                height: 18px;
+                                img{
+                                    @include img;
+                                }
+                            }
+                        }
+                        .jamb{
+                            width: 1px;
+                            height: 52px;
+                            flex-shrink: 0;
+                            background-color: var(--grey3);
+                            margin: 0 14px 0 24px;
+                        }
+                        .num__reveiw{
+                            @include flex($column: column, $x: flex-start, $y: flex-end);
+                            span{
+                                @include txt($fs:24px, $fw:700, $lh: 36px, $color: var(--blue));  
+                            }
+                            small{
+                                @include txt($fs:12px, $fw:500, $lh: normal, $color: var(--grey));  
+                                strong{
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                    }
+                } 
+            }
+            .travel__img{  
+                flex-shrink: 0;
+                position: relative;
+                img{
+                    z-index: 1;
+                }
+                .omament{
+                    width: 255px;
+                    height: 280px;
+                    // background: linear-gradient(213deg, rgba(64, 137, 248, 0.10) 22.82%, rgba(242, 242, 242, 0.00) 66.29%);
+                    position: absolute;
+                    top: 55px;
+                    right: 0;  
+                }
+                .bgr__circle{
+                    position: absolute;
+                    bottom: 65px;
+                    right: 54px;
+                    transform: scale(1.2);
+                }
+                .live{
+                    @include flex($column: column, $gap:17px);
+                    padding: 18px 25px;
+                    border-radius: 20px;
+                    border: 1px solid rgba(243, 243, 243, 0.29);
+                    background: linear-gradient(193deg, rgba(255, 255, 255, 0.29) 61.18%, rgba(255, 255, 255, 0.00) 95.07%);
+                    box-shadow: 0px 0px 53.9px 0px rgba(0, 163, 255, 0.05);
+                    backdrop-filter: blur(20px);
+                    position: absolute;
+                    right: 442px;
+                    bottom: 19px;
+                    z-index: 1;
+                    .live__circle{
+                        padding: 9px;
+                        border-radius: 50%;
+                        background-color: var(--blue);
+                        position: relative;
+                        .circle__border{
+                            @include flex($column: column, $gap: 6px);
+                            @include abs-center;
+                            .camera{
+                                width: 24px;
+                                height: 24px;   
+                                img{
+                                    @include img;
+                                }
+                            }
+                            span{
+                                @include flex;
+                                padding: 3px;
+                                border-radius: 3px;
+                                background-color: var(--white);
+                                @include txt($fs:12px, $fw:700, $lh: 8px, $color: var(--dark));
+                                
+                            }
+                            
+                        }
+                    }
+                    .live__time{
+                        @include flex($column: column, $gap:5px);
+                        time{
+                            @include txt($fs:32px, $fw:700, $lh: normal, $color: var(--dark));
+                            
+                        }
+                        p{
+                            @include txt($fs:12px, $fw:600, $lh: normal, $color: var(--grey));
+                            
+                        }
+                    }
+                
+                }
+
+            
+            }
+        }
+    }
+    
+}
+
