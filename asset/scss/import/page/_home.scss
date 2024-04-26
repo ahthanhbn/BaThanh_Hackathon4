@@ -4,66 +4,67 @@
     height: 100%;
     margin: 0 auto;
     background-color: var(--white);
-    .header{
-        .header__top{
-            position: sticky;
-            top: 0;
-            z-index: 2;
-            @include flex($y:space-between);
-            padding: 30px 60px;
-            .header__logo{
-                @include flex($gap:15px);
-                a{
-                    padding: 8px 10px;
-                    background-color: var(--blue);
-                    border-radius: 12px;
-                    @include a($fs:20px, $fw:800, $lh: normal, $color: var(--dark));
-                    
-                }
-                :nth-child(2){
-                    padding: 0;
-                    background-color: var(--white); 
-                } 
-            }
-            .header__middle{
-                @include flex($gap:40px);
-                .middle__item{
-                    @include txt($fs:16px, $fw:500, $lh: 24px, $color: var(--dark));
-                }
+    .header__top{
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        background-color: var(--white);
+        @include flex($y:space-between);
+        padding: 30px 60px;
+        box-shadow: 0px 8px 120px 0px rgba(15, 15, 15, 0.08);
+        .header__logo{
+            @include flex($gap:15px);
+            a{
+                padding: 8px 10px;
+                background-color: var(--blue);
+                border-radius: 12px;
+                @include a($fs:20px, $fw:800, $lh: normal, $color: var(--dark));
                 
             }
-            .header__right{
-                @include flex($gap:15px);
-                .notifi{
-                    @include flex($gap:12px);
-                    a{
-                        @include a($fs:14px, $fw:700, $lh:21px, $color: var(--grey));
-                    }
-                    
-                }
-                .jamb{
-                    width: 1px;
-                    height: 32px;
-                    opacity: 0.5;
-                    background-color: var(--grey2);
-                }
-                .sign__in{
-                    width: 32px;
-                    height: 32px;
-                    flex-shrink: 0;
-                    img{
-                        @include img;
-                    }  
-                } 
+            :nth-child(2){
+                padding: 0;
+                background-color: var(--white); 
+            } 
+        }
+        .header__middle{
+            @include flex($gap:40px);
+            .middle__item{
+                @include txt($fs:16px, $fw:500, $lh: 24px, $color: var(--dark));
             }
             
         }
+        .header__right{
+            @include flex($gap:15px);
+            .notifi{
+                @include flex($gap:12px);
+                a{
+                    @include a($fs:14px, $fw:700, $lh:21px, $color: var(--grey));
+                }
+                
+            }
+            .jamb{
+                width: 1px;
+                height: 32px;
+                opacity: 0.5;
+                background-color: var(--grey2);
+            }
+            .sign__in{
+                width: 32px;
+                height: 32px;
+                flex-shrink: 0;
+                img{
+                    @include img;
+                }  
+            } 
+        }
         
+    }  
+    .header{
         .header__bottom{
-            @include flex($x: flex-start, $gap:34.12px);
+            @include flex($y: space-between);
             .travel{
+                padding-left: 9.36%;
                 @include flex($column: column, $x:flex-start, $gap:70px, $y:flex-start);
-                padding-left: 134.88px;
                 position: relative;
                 .ormament{
                     position: absolute;
@@ -159,8 +160,8 @@
                 } 
             }
             .travel__img{  
-                flex-shrink: 0;
                 position: relative;
+                overflow: hidden;
                 img{
                     z-index: 1;
                 }
@@ -174,7 +175,7 @@
                 }
                 .bgr__circle{
                     position: absolute;
-                    bottom: 65px;
+                    bottom: 62px;
                     right: 54px;
                     transform: scale(1.2);
                 }
@@ -187,7 +188,7 @@
                     box-shadow: 0px 0px 53.9px 0px rgba(0, 163, 255, 0.05);
                     backdrop-filter: blur(20px);
                     position: absolute;
-                    right: 442px;
+                    right: 60.3%;
                     bottom: 19px;
                     z-index: 1;
                     .live__circle{
@@ -210,10 +211,8 @@
                                 padding: 3px;
                                 border-radius: 3px;
                                 background-color: var(--white);
-                                @include txt($fs:12px, $fw:700, $lh: 8px, $color: var(--dark));
-                                
+                                @include txt($fs:12px, $fw:700, $lh: 8px, $color: var(--dark));           
                             }
-                            
                         }
                     }
                     .live__time{
@@ -227,13 +226,505 @@
                             
                         }
                     }
-                
                 }
-
-            
             }
         }
     }
+    .company{
+        padding: 70px 284px;
+        background:  #F4F5F9;
+        @include flex($gap:40px);
     
+        .amadeus{
+            width: 113px;
+            height: 15px;
+            flex-shrink: 0;
+            img{
+                @include img;
+            }
+        }
+        .booking{
+            width: 108px;
+            height: 18px; 
+            flex-shrink: 0;
+            position: relative;
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            :first-child{
+                @include inline-block;
+
+            }
+            :nth-child(2){
+                @include inline-block;
+                margin-left: 10.2px;
+            }
+            :last-child{
+                @include inline-block;
+                margin-top: 3.58px;
+                margin-left: 57.4px;
+
+            }
+        } 
+        .trivago{
+            flex-shrink: 0;
+            @include flex($gap:5.63px);
+            
+        } 
+        .trainline{
+            width: 111px;
+            height: 24px; 
+            flex-shrink: 0;
+            img{
+                @include img;
+            }  
+        } 
+        .cheapflights{
+            width: 112px;
+            height: 15px; 
+            flex-shrink: 0;
+            img{
+                @include img;
+            }  
+        } 
+        .momondo{
+            width: 116px;
+            height: 18px; 
+            flex-shrink: 0;
+            img{
+                @include img;
+            }  
+        } 
+        
+        .trivago__logo{
+        
+        }
+        .trivago__name{
+        
+        }
+    }
+    .innovative{
+        padding: 70px 282px;
+        @include flex($column: column, $gap:50px);
+        .innovative__heading{
+            @include flex($column: column, $gap:24px);
+            h1{
+                @include txt($fs:40px, $fw:700, $lh: 60px,$txt-tranf:capitalize, $color: var(--dark2));
+                letter-spacing: -0.4px;
+                @include txt-truncate($line:1);
+            }
+            p{
+                text-align: center;
+                @include txt($fs:18px, $fw:400, $lh: 32px, $color: var(--dark));
+                @include txt-truncate($line:2);
+                
+            }
+        }
+        .innovative__products{
+            @include flex($gap:30px);
+            .innovative__product{
+                @include flex($column: column, $gap:16px);
+                border-radius: 12px;
+                .innova__logo{
+                    width: 48px;
+                    height: 48px;
+                    @include flex;
+                    border-radius: 30px;
+                    
+                }
+                .color--green{
+                    background-color: #58C27D;
+                }
+                .color--orange{
+                    background-color:#FA8F54 ;
+                }
+                .color--blue{
+                    background-color: #3B71FE;
+                }
+                
+                p{
+                    text-align: center;
+                    @include txt($fs:17px, $fw:500, $lh: 26px, $color: var(--dark));
+                    @include txt-truncate($line:3);
+                }
+                .learn__more{
+                    margin-top: 12px;
+                    @include flex($gap:3px);
+                    a{
+                        @include a($fs:12px, $fw:500, $lh: normal, $color: var(--dark));
+                    }
+                    .learn__arrow{
+                        width: 24px;
+                        height: 24px;
+                        flex-shrink: 0;
+                        img{
+                            @include img;
+                        }
+                    }
+                    
+                }
+                
+            }
+            .grey--green{
+                background-color: #EEF9F2;
+                padding: 21px 35px;
+            }
+            .grey--orange{
+                background-color:#FFF4EE ;
+                padding: 21px 31px;
+            }
+            .grey--blue{
+                background-color: #EBF1FF;
+                padding: 21px 50px;
+            }     
+        }
+    }
+    .book{
+        @include flex($y: space-between, $gap:102px);
+        padding: 69px 135px;
+        .book__create{
+            padding: 40px 69px;
+            @include flex($column: column, $gap:26px);
+            background-color: #FEE2B6;
+            border-radius: 39px;
+            .create__setup{
+                border-radius: 30px;
+                overflow: hidden;
+                .create__plan{
+                    padding: 25px 67px 25px 38px;
+                    background-color: var(--blue);
+                    @include flex($column: column,$x: flex-start, $gap: 18px );
+                    .create__heading{
+                        h2{
+                            @include txt($fs:18px, $fw:700, $lh: 27px, $color: var(--dark));
+                            @include txt-truncate($line:1);
+                            margin-bottom: 9px;
+                        }
+                        p{
+                            @include txt($fs:16px, $fw:400, $lh: 27px, $color: var(--dark));
+                            @include txt-truncate($line:1);
+                        }
+                    }
+                    .plan__trip{
+                        width: 250px;
+                        padding: 8px 12px 8px 16px;
+                        @include flex($y: space-between);
+                        border-radius: 10px;
+                        background: var(--white);
+                        button{
+                            @include txt($fs:14px, $fw:700, $lh: 21px, $color: var(--dark1));
+                        }
+                        .plan__arrow{
+                            width: 24px;
+                            height: 24px;
+                            img{
+                                @include img;
+                            }
+                        }
+                    }
+                    .select__account{
+                        @include flex($x: flex-start, $gap:14px);
+                        .select__check{
+                            @include flex($column: column,$x: flex-start, $gap: 6px );
+                            label{
+                                
+                                @include txt($fs:16px, $fw:700, $lh: 24px, $color: #F4F5F9);
+                            }
+                            p{
+                                @include txt($fs:14px, $fw:400, $lh: 20px, $color: #E6E8EC);
+
+                            }
+                            
+                        }
+                        
+                    }
+                    .select__day{
+                        @include flex($x: flex-start, $gap:14px);
+                        .select__check{
+                            @include flex($column: column,$x: flex-start, $gap: 6px );
+                            label{
+                                @include txt($fs:16px, $fw:700, $lh: 24px, $color: #F4F5F9);
+                                
+                            }
+                            p{
+                                @include txt($fs:14px, $fw:400, $lh: 20px, $color: #E6E8EC);
+
+                            }
+                            
+                        }
+                        
+                    }
+                    .select__system{
+                        @include flex($x: flex-start, $gap:14px);
+                        .select__check{
+                            @include flex($column: column,$x: flex-start, $gap: 6px );
+                            label{
+                                @include txt($fs:16px, $fw:700, $lh: 24px, $color: #F4F5F9);
+                                
+                            }
+                            p{
+                                @include txt($fs:14px, $fw:400, $lh: 20px, $color: #E6E8EC);
+                            }
+                        }
+                    }
+                    input[type = "radio"]{
+                        width: 20px;
+                        height: 20px;
+                        flex-shrink: 0;
+                        background-color: var(--white);
+                    }
+                    
+                    
+                    
+                } 
+                .create__money{
+                    background-color: var(--white);
+                    padding: 10px 38px 25px 38px;
+                    p{
+                        @include txt($fs:26px, $fw:600, $lh: 36px);
+                        span{
+                            @include txt($fs:14px, $fw:600, $lh: 36px);
+                            
+                        }   
+                    }
+                }
+            }
+            .create__page{
+                @include flex($gap: 40px);
+                .page__arrow{
+                    width: 24px;
+                    height: 24px;
+                    flex-shrink: 0;
+                    img{
+                        @include img;
+                    }
+                }
+                .page__number{
+                    color: var(--grey);
+                    a{
+                        @include inline-block;
+                        padding: 0 15px;
+                        @include a($fs:16px, $fw:400, $lh: 24px);
+                    }
+                    :last-child{
+                        color: var(--grey);
+                    }
+                }
+            }
+        }
+        .book__step{
+            @include flex($column: column, $gap:50px, $x:flex-start);
+            .book__top{
+                @include flex($column: column, $gap:30px, $x:flex-start);
+                padding-right: 26px;
+                .book__heading{
+                    h1{
+                        @include txt($fs:40px, $fw:700, $lh: 60px, $color: var(--dark1));
+                        letter-spacing: -0.4px;
+                        @include txt-truncate($line:1);
+                        margin-bottom: 24px;
+                        
+                    }
+                    p{
+                        @include txt($fs:14px, $fw:500, $lh: 20px);
+                        @include txt-truncate($line:3);
+                        
+                    }
+                }
+                .book__check{
+                    padding-bottom: 26px;
+                    border-bottom: 1px dashed var(--grey);
+                    @include flex($column: column, $gap:20px, $x:flex-start);
+                    .check__account{   
+                        @include flex( $gap:20px, $x:flex-start);
+                        label{
+                            @include txt($fs:16px, $fw:700, $lh: 24px);
+                            @include txt-truncate($line:1);
+                        }
+                    }
+                    .check__private{
+                        @include flex( $gap:20px, $x:flex-start);
+                        label{
+                            @include txt($fs:16px, $fw:700, $lh: 24px);
+                            @include txt-truncate($line:1);
+                            
+                        }
+                    }
+                    .check__utrip{
+                        @include flex( $gap:20px, $x:flex-start);
+                        label{
+                            @include txt($fs:16px, $fw:700, $lh: 24px);
+                            @include txt-truncate($line:1);
+                            
+                        }
+                    }
+                    
+                    input[type="radio"]{
+                        width: 20px;
+                        height: 20px;
+                        flex-shrink: 0;
+                    }
+                    
+                }
+                span{
+                    @include inline-block;
+                    margin-top: -10px;
+                    @include txt($fs:16px, $fw:400, $lh: 24px);
+                    font-style: italic;
+                    @include txt-truncate($line:2);
+
+                }
+                
+            
+            }
+            .book__customer{
+                @include flex($gap: 14px, $y: flex-start);
+                .cus__avt{
+                    width: 70px;
+                    height: 70px;       
+                    border-radius: 50%;
+                    flex-shrink: 0;
+                    overflow: hidden;
+                    img{
+                        @include img;
+                    }
+                }
+                .cus__name{
+                    @include flex($column: column , $x: flex-start);
+                    a{
+                        @include a($fs:18px, $fw:700, $lh: 27px);
+                        
+                    }
+                    span{
+                        @include txt($fs:18px, $fw:400, $lh: 32px, $color: var(--grey));
+                        
+                    }
+                    
+                }
+                
+            }
+        
+        }
+    }
+    .website{
+        padding: 71px 135px;
+        background-color: #EAF0FF;
+        @include flex($gap: 112px);
+        .website__booking{
+            @include flex($column: column, $gap: 50px, $x: flex-start);
+            .website__heading{
+                h1{
+                    @include txt($fs:40px, $fw:700, $lh: 60px, $color: var(--dark1));
+                    letter-spacing: -0.4px;
+                    @include txt-truncate($line:1);
+                    margin-bottom: 24px;
+                }
+                p{
+                    @include txt($fs:16px, $fw:400, $lh: 24px);
+                    @include txt-truncate($line:3);
+                    
+                }
+            }
+            .booking__places{
+                @include flex($gap: 20px);
+                .place__trip{
+                    padding: 22px 27px 22px 15px;
+                    @include flex($column: column, $gap: 10px, $x: flex-start, $y: flex-start);
+                    border-radius: 10px;
+                    border: 1.106px solid #F4F5F6;
+                    background: var(--white);
+                    box-shadow: 0px 2.213px 8.851px 0px rgba(15, 15, 15, 0.08);
+                    .place__img{
+                        width: 22px;
+                        height: 22px;
+                        flex-shrink: 0;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        img{
+                            @include img;
+                        }
+                    }
+                    h3{
+                        @include txt($fs:14px, $fw:600);
+                        @include txt-truncate($line:1);
+                    }
+                    p{
+                        @include txt($fs:11px, $fw:500, $lh: 16.585px, $color: var(--grey));
+                        @include txt-truncate($line:2);
+
+                    }
+                }
+                
+            }
+        
+        }
+
+        .website__message{
+            padding: 31px 24px;
+            background-color: var(--white);
+            border-radius: 30px;
+            box-shadow: 0px 14px 40px -15px rgba(15, 15, 15, 0.08);
+            .website__admin{
+                @include flex($gap: 17px, $x: flex-start, $y: flex-start);
+                .admin__avt{
+                    width: 40px;
+                    height: 40px;
+                    flex-shrink: 0;
+                    background-color:#EAF0FF ;
+                    border-radius: 50%;
+                    position: relative;
+                    overflow: hidden;
+                    img{
+                        position: absolute;
+                        top: 35%;
+                    }
+                    
+                }
+                .admin__hi{
+                    @include flex($column: column, $gap: 4px, $x: flex-start);
+                    h4{
+                        @include txt($fs:20px, $fw:700);
+                    }
+                    p{
+                        @include txt($fs:14px, $fw:500, $lh: 20px, $color: var(--grey));
+
+                    }
+                }
+
+                
+            }
+            .website__text{
+                width: 326px;
+                padding: 20px;
+                background-color: #ECECEC;
+                border-radius: 23px;
+                position: relative;
+                img{
+                    @include img;
+                }
+                button{
+                    position: absolute;
+                    top:35%;
+                    right:2.7%;
+                    background-color:#FA8F54 ;
+                    padding: 6px 26px;
+                    border-radius: 10px;
+                    @include txt($fs:14px, $fw:500, $lh: 20px, $color: var(--white));
+
+                }
+                .button__arrow{
+                    position: absolute;
+                    top:29.8%;
+                    right: 26.8%;
+                    flex-shrink: 0;
+
+                }
+            }
+        }
+    }
+
+   
 }
 
