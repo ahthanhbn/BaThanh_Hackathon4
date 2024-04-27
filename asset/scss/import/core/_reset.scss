@@ -34,4 +34,20 @@ body {
   line-height: 1;
 }
 
+.color--green{
+  background-color: #58C27D;
+}
+.color--orange{
+  background-color:#FA8F54 ;
+}
+.color--blue{
+  background-color: #3B71FE;
+}
 
+.color--blue1{
+  background-color: var(--blue);
+}
+
+.color--yellow{
+  background-color: #FFD166;
+}
