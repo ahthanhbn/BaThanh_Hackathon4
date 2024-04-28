@@ -1086,6 +1086,324 @@
 
         }
     }
+    .discover{
+        padding:70px 135px;
+        @include flex($column: column, $gap: 74px);
+        .discover__heading{
+            h1{
+                @include txt($fs:40px , $fw:700, $lh: 60px, $color: var(--dark1)   );
+                letter-spacing: -0.4px;
+                @include txt-truncate($line:1);
+            }
+        }   
+        .discover__features{
+            @include flex($column: column, $gap:56px);
+            .feature__top{
+                @include flex($y: space-between, $gap:317px);
+                .feature__item{
+                    @include flex($column: column, $x: flex-start, $gap:20px);
+                    .item__heading{
+                        @include flex( $gap:16px);
+                        .icon{
+                            @include flex;
+                            width: 44px;
+                            height: 44px;
+                            flex-shrink: 0;
+                            border-radius: 6px;                        
+                        }
+                        h2{
+                            @include txt($fs:30px , $fw:600, $lh: 45px, $color: var(--dark1)   );
+                            @include txt-truncate($line:1);
+                        }
+                        
+                    }
+                    p{
+                        @include txt($fs:18px , $fw:400, $lh: 32px, $color: var(--dark)   );
+                        @include txt-truncate($line:2);
+
+                    }
+                    
+                }
+            
+            }
+            .feature__right{
+                @include flex($y: space-between, $gap:252px);
+                .feature__item{
+                    @include flex($column: column, $x: flex-start, $gap:20px);
+                    .item__heading{
+                        @include flex( $gap:16px);
+                        .icon{
+                            @include flex;
+                            width: 44px;
+                            height: 44px;
+                            flex-shrink: 0;
+                            border-radius: 6px;                        
+                        }
+                        h2{
+                            @include txt($fs:30px , $fw:600, $lh: 45px, $color: var(--dark1)   );
+                            @include txt-truncate($line:1);
+                        }
+                        
+                    }
+                    p{
+                        @include txt($fs:18px , $fw:400, $lh: 32px, $color: var(--dark)   );
+                        @include txt-truncate($line:2);
+
+                    }
+                    
+                }
+            
+            }
+        }
+
+    }
+    .ready{ 
+        padding: 100px 135px 0 135px ;
+        background: rgba(251, 246, 199, 0.80);
+        @include flex($y: space-between, $gap: 201px, $x: flex-start);
+        .ready__heading{
+            @include flex($column: column, $gap: 24px, $x: flex-start);
+            padding-top: 65px;
+            h1{
+                @include txt($fs:40px , $fw:700, $lh: 60px, $color: var(--dark1)   );
+                letter-spacing: -0.4px;
+                @include txt-truncate($line:2);
+            }
+            p{
+                @include txt($fs:18px , $fw:400, $lh: 32px, $color: var(--dark)   );
+                @include txt-truncate($line:2);
+            }
+            button{
+                padding: 9px 29px 8px 28px;
+                border-radius: 6px;
+                background: var(--blue);
+                @include txt($fs:14px , $fw:700, $lh: 21px, $color: var(--white)   );
+
+            }
+        }
+
+        .ready__for{
+            position: relative;
+            .ready__img{
+                height: 470px;
+                padding-left: 24px;
+                padding-right: 40.12px;
+                @include flex($x: flex-start);
+                .img1{
+                    width: 170.7px;
+                    height: 401.767px;
+                    img{
+                        @include img;
+                    }
+                }
+                .img2{
+                    width: 205.177px;
+                    height: 342.89px;
+                    img{
+                        @include img;
+                    }
+                }
+                
+            }
+            .check__plan{
+                width: 100%;
+                position: absolute;
+                right: 0;
+                bottom:0;
+                padding: 30px 36px;
+                @include flex($column: column, $gap: 16px, $x: flex-start);
+                background-color: var(--white);
+                border-radius: 24px 24px 0px 0px;
+                .check__item{
+                    width: 100%;
+                    padding: 10px 14px;
+                    @include flex($y: space-between);
+                    border-radius: 10px;
+                    border: 0.5px solid #D3D3D3;
+                    background: var(--white);
+                    transition: all .2s ease;
+                    cursor: pointer;
+                    .item__left{
+                        @include flex($y: flex-start, $gap: 10px);
+                        .img{
+                            @include flex;
+                            width: 32px;
+                            height: 32px;
+                            flex-shrink: 0;
+                            border-radius: 9px;
+                            background: var(--primary-blue-20, #D8E3FF);
+                        }
+                        .plan{
+                            @include flex($column: column, $gap: 5px, $x: flex-start);
+                            h2{
+                                @include txt($fs:12px , $fw:500, $lh: normal, $color: var(--dark)   );
+                                @include txt-truncate($line:1);
+                            }
+                            .customer{
+                                @include flex( $gap: 6px, $x: flex-start);
+                                .avt{
+                                    width: 10px;
+                                    height: 10px;
+                                    flex-shrink: 0;
+                                    border-radius: 50%;   
+                                    overflow: hidden;
+                                }
+                                a{
+                                    @include a($fs:8px , $fw:500, $lh: normal, $color: var(--grey));
+                                    @include txt-truncate($line:1);
+                                }
+                                span{
+                                    @include inline-block;
+                                    margin-left: 4px;
+                                    padding: 2px 7px 2px 6px;
+                                    border-radius: 3px;
+                                    background-color: #F4F5F9;
+                                    @include txt($fs:6px , $fw:500, $lh: normal, $color: #FF6370);
+                                }
+                            }
+                        }
+                    }
+                    &:hover{
+                        box-shadow: 0px 4px 10px 0px rgba(15, 15, 15, 0.12);
+                    }  
+                }
+                button{
+                    padding: 6px 8px 6px 7px;
+                    background-color: #FEE9DD;
+                    border-radius: 4px;
+                    @include txt($fs:7px , $fw:500, $lh: normal, $color: #FA8F54);
+                }
+            }
+        }
+    }
+    .footer{
+        padding: 68px 170px;
+        @include flex($column: column);
+        
+        .footer__top{
+            padding: 0 15px ;
+
+            @include flex( $gap: 152px, $x: flex-start);
+            .footer__company{
+                @include flex($column: column, $gap: 30px, $x: flex-start);
+                .company__logo{
+                    margin-bottom: 10px;
+                    @include flex($gap:15px);
+                    a{
+                        @include inline-block;
+                        padding: 8px 10px ;
+                        border-radius: 12px;
+                        background: var(--blue);
+                    }
+                    .bgr--white{
+                        background-color: var(--white);
+                        padding: 0;
+                        @include a($fs: 20px, $fw:800, $lh: normal, $color: var(--dark));
+                    }
+                }
+                p{
+                    @include txt($fs: 16px, $fw:400, $lh: 24px, $color: var(--dark));
+                    // @include txt-truncate($line:3);
+                }
+                .footer__email{
+                    @include flex;
+                    padding: 8px 8px 8px 26px;
+                    border-radius: 24px;
+                    border: 2px solid var(--grey3);
+                    input[type ="search"]{
+                        border: none;
+                        @include txt($fs: 16px, $fw:500, $lh: 24px, $color: var(--grey3));
+                        &:focus{
+                            border: none;
+                            color: var(--dark);
+                            opacity: 0.5;
+                        }
+                    }
+                    .arrow{
+                        padding: 10px;
+                        width: 33px;
+                        height: 33px;
+                        border-radius: 30px;
+                        background: var(--blue);
+                        overflow: hidden;
+                        img{
+                            @include img;
+                            transform: scale(2);
+                        }
+                    }
+                }
+            }
+            .footer__services{
+                @include flex($column: column, $gap: 14px, $x: flex-start);
+                h1{
+                    @include txt($fs: 24px, $fw:500, $lh: 36px, $color: var(--dark));
+                    margin-bottom: 6px;
+                }
+                a{
+                    @include a($fs: 16px, $fw:400, $lh: 24px, $color: var(--grey));
+                    white-space: nowrap;
+                    &:hover{
+                        color: var(--blue);
+
+                    }
+                }
+
+            }
+            
+            .footer__support{
+                @include flex($column: column, $gap: 14px, $x: flex-start);
+                h1{
+                    @include txt($fs: 24px, $fw:500, $lh: 36px, $color: var(--dark));
+                    margin-bottom: 6px;
+                }
+                a{
+                    @include a($fs: 16px, $fw:400, $lh: 24px, $color: var(--grey));
+                    white-space: nowrap;
+                    &:hover{
+                        color: var(--blue);
+
+                    }
+                }
+            }
+            .footer__business{
+                @include flex($column: column, $gap: 14px, $x: flex-start);
+                h1{
+                    @include txt($fs: 24px, $fw:500, $lh: 36px, $color: var(--dark));
+                    margin-bottom: 6px;
+                }
+                a{
+                    @include a($fs: 16px, $fw:400, $lh: 24px, $color: var(--grey));
+                    white-space: nowrap;
+                    &:hover{
+                        color: var(--blue);
+
+                    }
+                }
+            }
+        }
+        .footer__line{
+            height: 1px;
+            width: 100%;
+            margin-top: 71px;
+            margin-bottom: 40px;
+            background-color: var(--grey3);
+        }
+        .footer__bottom{
+            width: 100%;
+            @include flex($y: space-between);
+            span{   
+                @include a($fs: 14px, $fw:400, $lh: 20px, $color: var(--grey2));
+            }
+            .footer__social{
+                @include flex($gap:14px);
+                a{
+                    @include inline-block;
+                    padding: 2px;
+                }
+            
+            }
+        }
+    }
    
 }
 
