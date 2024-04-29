@@ -100,7 +100,7 @@
                     .plan__trip{
                         width: 317px;
                         padding: 8px 8px 8px 44px;
-                        @include flex($gap:111px);
+                        @include flex($gap:111px, $y: space-between);
                         border-radius: 31px;
                         background: var(--white);
                         box-shadow: -16px 22px 42px 0px rgba(0, 31, 77, 0.12);
@@ -160,6 +160,7 @@
                 } 
             }
             .travel__img{  
+                
                 position: relative;
                 overflow: hidden;
                 img{
@@ -175,9 +176,7 @@
                 }
                 .bgr__circle{
                     position: absolute;
-                    bottom: 62px;
-                    right: 54px;
-                    transform: scale(1.2);
+                    bottom: 0;
                 }
                 .live{
                     @include flex($column: column, $gap:17px);
@@ -1405,5 +1404,1404 @@
         }
     }
    
+}
+
+@media screen and (max-width: 1023.98px) {
+    body{
+        box-sizing: border-box;
+    }
+    .home{
+        max-width: 1023.98px;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        background-color: var(--white);
+        .header__top{
+            position: sticky;
+            top: 0;
+            z-index: 5;
+            background-color: var(--white);
+            @include flex($y:space-between);
+            padding: 15px 30px;
+            box-shadow: 0px 8px 120px 0px rgba(15, 15, 15, 0.08);
+            .header__logo{
+                @include flex($gap:15px);
+                a{
+                    padding: 8px 10px;
+                    background-color: var(--blue);
+                    border-radius: 12px;
+                    @include a($fs:20px, $fw:800, $lh: normal, $color: var(--dark));
+                    
+                }
+                :nth-child(2){
+                    padding: 0;
+                    background-color: var(--white); 
+                } 
+            }
+            .header__middle{
+                @include flex($gap:40px);
+                .middle__item{
+                    @include txt($fs:16px, $fw:500, $lh: 24px, $color: var(--dark));
+                }
+                
+            }
+            .header__right{
+                @include flex($gap:15px);
+                .notifi{
+                    @include flex($gap:12px);
+                    a{
+                        @include a($fs:14px, $fw:700, $lh:21px, $color: var(--grey));
+                    }
+                    
+                }
+                .jamb{
+                    width: 1px;
+                    height: 32px;
+                    opacity: 0.5;
+                    background-color: var(--grey2);
+                }
+                .sign__in{
+                    width: 32px;
+                    height: 32px;
+                    flex-shrink: 0;
+                    img{
+                        @include img;
+                    }  
+                } 
+            }
+            
+        } 
+        .header{
+            .header__bottom{
+                @include flex($y: space-between);
+                .travel{
+                    padding-left: 5%;
+                    @include flex($column: column, $x:flex-start, $gap:70px, $y:flex-start);
+                    position: relative;
+                    .ormament{
+                        position: absolute;
+                        top: 125px;
+                        left: 356px;
+                        right: 94px;
+                        transform: translate(126px,0);
+                        display: none;
+                    }
+                    .eliment{
+                        position: absolute;
+                        left: 0;
+                        bottom: 60.29px;
+                        transform: rotate(-19.16 deg);
+                        display: none;
+                    }
+                    .travel__top{
+                        margin-top: 6.83px;
+                        .travel__heading{
+                            margin-bottom: 30px;
+                            h1{
+                                @include txt($fs:32px, $fw:800, $lh: normal, $color: var(--dark), $txt-tranf:capitalize);
+                                @include txt-truncate($line:2);
+                                span{
+                                    color: #F5B318;
+                                }                            
+                            }
+                        }
+                        p{
+                            @include inline-block;
+                            @include txt($fs:14px, $fw:500, $lh: 28px, $color: var(--grey));
+                            @include txt-truncate($line:2);
+                            margin-bottom: 30px;
+                        } 
+                        .plan__trip{
+                            width: 317px;
+                            padding: 8px 8px 8px 34px;
+                            @include flex($gap:111px, $y: space-between);
+                            border-radius: 31px;
+                            background: var(--white);
+                            box-shadow: -16px 22px 42px 0px rgba(0, 31, 77, 0.12);
+                            button{
+                                @include txt($fs:18px, $fw:700, $lh: normal, $color: var(--dark));
+                                white-space: nowrap;
+                            }
+                            a{
+                                @include inline-block;
+                                padding: 5px;
+                                background-color: var(--blue);
+                                border-radius: 30px;
+                            }
+                        }
+                    }
+                    .travel__bottom{
+                        @include flex($column: column, $gap:10px, $x: flex-start);
+                        p{
+                            @include txt($fs:14px, $fw:500, $lh: 24px, $color: var(--grey));
+                            
+                        }
+                        .travel__recomment{
+                            @include flex($x:flex-end);
+                            .recomment{
+                                @include flex($column: column, $gap:7px, $x: flex-start);
+                                h4{
+                                    @include txt($fs:20px, $fw:500, $lh: 36px, $color: var(--dark2));  
+                                }
+                                .recomment__star{
+                                    width: 106px;
+                                    height: 18px;
+                                    img{
+                                        @include img;
+                                    }
+                                }
+                            }
+                            .jamb{
+                                width: 1px;
+                                height: 52px;
+                                flex-shrink: 0;
+                                background-color: var(--grey3);
+                                margin: 0 14px 0 24px;
+                            }
+                            .num__reveiw{
+                                @include flex($column: column, $x: flex-start, $y: flex-end);
+                                span{
+                                    @include txt($fs:20px, $fw:700, $lh: 36px, $color: var(--blue));  
+                                }
+                                small{
+                                    @include txt($fs:12px, $fw:500, $lh: normal, $color: var(--grey));  
+                                    strong{
+                                        font-weight: 700;
+                                    }
+                                }
+                            }
+                        }
+                    } 
+                }
+                .travel__img{
+                    position: relative;
+                    overflow: hidden;
+                    img{
+                        z-index: 1;
+                    }
+                    .omament{
+                        width: 255px;
+                        height: 280px;
+                        // background: linear-gradient(213deg, rgba(64, 137, 248, 0.10) 22.82%, rgba(242, 242, 242, 0.00) 66.29%);
+                        position: absolute;
+                        top: 55px;
+                        right: 0;  
+                    }
+                    .bgr__circle{
+                        position: absolute;
+                        flex-shrink: 0;
+                        bottom: 0;
+                        
+                    }
+                    .live{
+                        @include flex($column: column, $gap:17px);
+                        padding: 18px 25px;
+                        border-radius: 20px;
+                        border: 1px solid rgba(243, 243, 243, 0.29);
+                        background: linear-gradient(193deg, rgba(255, 255, 255, 0.29) 61.18%, rgba(255, 255, 255, 0.00) 95.07%);
+                        box-shadow: 0px 0px 53.9px 0px rgba(0, 163, 255, 0.05);
+                        backdrop-filter: blur(20px);
+                        position: absolute;
+                        right: 60.3%;
+                        bottom: 19px;
+                        z-index: 1;
+                        .live__circle{
+                            padding: 9px;
+                            border-radius: 50%;
+                            background-color: var(--blue);
+                            position: relative;
+                            .circle__border{
+                                @include flex($column: column, $gap: 6px);
+                                @include abs-center;
+                                .camera{
+                                    width: 24px;
+                                    height: 24px;   
+                                    img{
+                                        @include img;
+                                    }
+                                }
+                                span{
+                                    @include flex;
+                                    padding: 3px;
+                                    border-radius: 3px;
+                                    background-color: var(--white);
+                                    @include txt($fs:12px, $fw:700, $lh: 8px, $color: var(--dark));           
+                                }
+                            }
+                        }
+                        .live__time{
+                            @include flex($column: column, $gap:5px);
+                            time{
+                                @include txt($fs:32px, $fw:700, $lh: normal, $color: var(--dark));
+                                
+                            }
+                            p{
+                                @include txt($fs:12px, $fw:600, $lh: normal, $color: var(--grey));
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .company{
+            padding: 50px 86px;
+            background:  #F4F5F9;
+            @include flex($gap:40px);
+        
+            .amadeus{
+                width: 113px;
+                height: 15px;
+                flex-shrink: 0;
+                img{
+                    @include img;
+                }
+            }
+            .booking{
+                width: 108px;
+                height: 18px; 
+                flex-shrink: 0;
+                position: relative;
+                img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                :first-child{
+                    @include inline-block;
+    
+                }
+                :nth-child(2){
+                    @include inline-block;
+                    margin-left: 10.2px;
+                }
+                :last-child{
+                    @include inline-block;
+                    margin-top: 3.58px;
+                    margin-left: 57.4px;
+    
+                }
+            } 
+            .trivago{
+                flex-shrink: 0;
+                @include flex($gap:5.63px);
+                
+            } 
+            .trainline{
+                width: 111px;
+                height: 24px; 
+                flex-shrink: 0;
+                img{
+                    @include img;
+                }  
+            } 
+            .cheapflights{
+                width: 112px;
+                height: 15px; 
+                flex-shrink: 0;
+                img{
+                    @include img;
+                }  
+            } 
+            .momondo{
+                width: 116px;
+                height: 18px; 
+                flex-shrink: 0;
+                img{
+                    @include img;
+                }  
+            } 
+            
+            .trivago__logo{
+            
+            }
+            .trivago__name{
+            
+            }
+        }
+        .innovative{
+            padding: 50px 86px;
+            @include flex($column: column, $gap:50px);
+            .innovative__heading{
+                @include flex($column: column, $gap:24px);
+                h1{
+                    @include txt($fs:32px, $fw:700, $lh: 60px,$txt-tranf:capitalize, $color: var(--dark2));
+                    letter-spacing: -0.4px;
+                    @include txt-truncate($line:1);
+                }
+                p{
+                    text-align: center;
+                    @include txt($fs:14px, $fw:400, $lh: 32px, $color: var(--dark));
+                    @include txt-truncate($line:2);
+                    
+                }
+            }
+            .innovative__products{
+                @include flex($gap:30px);
+                .innovative__product{
+                    @include flex($column: column, $gap:16px);
+                    border-radius: 12px;
+                    .innova__logo{
+                        width: 48px;
+                        height: 48px;
+                        @include flex;
+                        border-radius: 30px;
+                        
+                    }
+                    p{
+                        text-align: center;
+                        @include txt($fs:17px, $fw:500, $lh: 26px, $color: var(--dark));
+                        @include txt-truncate($line:3);
+                    }
+                    .learn__more{
+                        margin-top: 12px;
+                        @include flex($gap:3px);
+                        a{
+                            @include a($fs:12px, $fw:500, $lh: normal, $color: var(--dark));
+                        }
+                        .learn__arrow{
+                            width: 24px;
+                            height: 24px;
+                            flex-shrink: 0;
+                            img{
+                                @include img;
+                            }
+                        }
+                        
+                    }
+                    
+                }
+                .grey--green{
+                    background-color: #EEF9F2;
+                    padding: 21px 35px;
+                }
+                .grey--orange{
+                    background-color:#FFF4EE ;
+                    padding: 21px 31px;
+                }
+                .grey--blue{
+                    background-color: #EBF1FF;
+                    padding: 21px 50px;
+                }     
+            }
+        }
+        .book{
+            @include flex($y: space-between, $gap:52px);
+            padding: 50px 86px;
+            .book__create{
+                padding: 34px 46px;
+                @include flex($column: column, $gap:26px);
+                background-color: #FEE2B6;
+                border-radius: 39px;
+                .create__setup{
+                    border-radius: 30px;
+                    overflow: hidden;
+                    .create__plan{
+                        padding: 25px 67px 25px 38px;
+                        background-color: var(--blue);
+                        @include flex($column: column,$x: flex-start, $gap: 18px );
+                        .create__heading{
+                            h2{
+                                @include txt($fs:18px, $fw:700, $lh: 27px, $color: var(--dark));
+                                @include txt-truncate($line:1);
+                                margin-bottom: 9px;
+                            }
+                            p{
+                                @include txt($fs:14px, $fw:400, $lh: 27px, $color: var(--dark));
+                                @include txt-truncate($line:1);
+                            }
+                        }
+                        .plan__trip{
+                            width: 250px;
+                            padding: 8px 12px 8px 16px;
+                            @include flex($y: space-between);
+                            border-radius: 10px;
+                            background: var(--white);
+                            button{
+                                @include txt($fs:14px, $fw:700, $lh: 21px, $color: var(--dark1));
+                            }
+                            .plan__arrow{
+                                width: 24px;
+                                height: 24px;
+                                img{
+                                    @include img;
+                                }
+                            }
+                        }
+                        .select__account{
+                            @include flex($x: flex-start, $gap:14px);
+                            .select__check{
+                                @include flex($column: column,$x: flex-start, $gap: 6px );
+                                label{
+                                    
+                                    @include txt($fs:14px, $fw:700, $lh: 24px, $color: #F4F5F9);
+                                }
+                                p{
+                                    @include txt($fs:12px, $fw:400, $lh: 20px, $color: #E6E8EC);
+    
+                                }
+                                
+                            }
+                            
+                        }
+                        .select__day{
+                            @include flex($x: flex-start, $gap:14px);
+                            .select__check{
+                                @include flex($column: column,$x: flex-start, $gap: 6px );
+                                label{
+                                    @include txt($fs:16px, $fw:700, $lh: 24px, $color: #F4F5F9);
+                                    
+                                }
+                                p{
+                                    @include txt($fs:14px, $fw:400, $lh: 20px, $color: #E6E8EC);
+    
+                                }
+                                
+                            }
+                            
+                        }
+                        .select__system{
+                            @include flex($x: flex-start, $gap:14px);
+                            .select__check{
+                                @include flex($column: column,$x: flex-start, $gap: 6px );
+                                label{
+                                    @include txt($fs:16px, $fw:700, $lh: 24px, $color: #F4F5F9);
+                                    
+                                }
+                                p{
+                                    @include txt($fs:14px, $fw:400, $lh: 20px, $color: #E6E8EC);
+                                }
+                            }
+                        }
+                        input[type = "radio"]{
+                            width: 20px;
+                            height: 20px;
+                            flex-shrink: 0;
+                            background-color: var(--white);
+                        }
+                        
+                        
+                        
+                    } 
+                    .create__money{
+                        background-color: var(--white);
+                        padding: 10px 38px 25px 38px;
+                        p{
+                            @include txt($fs:26px, $fw:600, $lh: 36px);
+                            span{
+                                @include txt($fs:14px, $fw:600, $lh: 36px);
+                                
+                            }   
+                        }
+                    }
+                }
+                .create__page{
+                    @include flex($gap: 40px);
+                    .page__arrow{
+                        width: 24px;
+                        height: 24px;
+                        flex-shrink: 0;
+                        img{
+                            @include img;
+                        }
+                    }
+                    .page__number{
+                        color: var(--grey);
+                        a{
+                            @include inline-block;
+                            padding: 0 15px;
+                            @include a($fs:16px, $fw:400, $lh: 24px);
+                        }
+                        :last-child{
+                            color: var(--grey);
+                        }
+                    }
+                }
+            }
+            .book__step{
+                @include flex($column: column, $gap:50px, $x:flex-start);
+                .book__top{
+                    @include flex($column: column, $gap:30px, $x:flex-start);
+                    padding-right: 26px;
+                    .book__heading{
+                        h1{
+                            @include txt($fs:30px, $fw:700, $lh: 60px, $color: var(--dark1));
+                            letter-spacing: -0.4px;
+                            @include txt-truncate($line:1);
+                            margin-bottom: 24px;
+                            
+                        }
+                        p{
+                            @include txt($fs:14px, $fw:500, $lh: 20px);
+                            @include txt-truncate($line:3);
+                            
+                        }
+                    }
+                    .book__check{
+                        padding-bottom: 26px;
+                        border-bottom: 1px dashed var(--grey);
+                        @include flex($column: column, $gap:20px, $x:flex-start);
+                        .check__account{   
+                            @include flex( $gap:20px, $x:flex-start);
+                            label{
+                                @include txt($fs:16px, $fw:700, $lh: 24px);
+                                @include txt-truncate($line:1);
+                            }
+                        }
+                        .check__private{
+                            @include flex( $gap:20px, $x:flex-start);
+                            label{
+                                @include txt($fs:16px, $fw:700, $lh: 24px);
+                                @include txt-truncate($line:1);
+                                
+                            }
+                        }
+                        .check__utrip{
+                            @include flex( $gap:20px, $x:flex-start);
+                            label{
+                                @include txt($fs:16px, $fw:700, $lh: 24px);
+                                @include txt-truncate($line:1);
+                                
+                            }
+                        }
+                        
+                        input[type="radio"]{
+                            width: 20px;
+                            height: 20px;
+                            flex-shrink: 0;
+                        }
+                        
+                    }
+                    span{
+                        @include inline-block;
+                        margin-top: -10px;
+                        @include txt($fs:16px, $fw:400, $lh: 24px);
+                        font-style: italic;
+                        @include txt-truncate($line:2);
+    
+                    }
+                    
+                
+                }
+                .book__customer{
+                    @include flex($gap: 14px, $y: flex-start);
+                    .cus__avt{
+                        width: 70px;
+                        height: 70px;       
+                        border-radius: 50%;
+                        flex-shrink: 0;
+                        overflow: hidden;
+                        img{
+                            @include img;
+                        }
+                    }
+                    .cus__name{
+                        @include flex($column: column , $x: flex-start);
+                        a{
+                            @include a($fs:18px, $fw:700, $lh: 27px);
+                            
+                        }
+                        span{
+                            @include txt($fs:18px, $fw:400, $lh: 32px, $color: var(--grey));
+                            
+                        }
+                        
+                    }
+                    
+                }
+            
+            }
+        }
+        .website{
+            padding: 50px 86px;
+            background-color: #EAF0FF;
+            @include flex($gap: 50px);
+            .website__booking{
+                @include flex($column: column, $gap: 30px, $x: flex-start);
+                .website__heading{
+                    h1{
+                        @include txt($fs:30px, $fw:700, $lh: 60px, $color: var(--dark1));
+                        letter-spacing: -0.4px;
+                        @include txt-truncate($line:1);
+                        margin-bottom: 24px;
+                    }
+                    p{
+                        @include txt($fs:14px, $fw:400, $lh: 24px);
+                        @include txt-truncate($line:3);
+                        
+                    }
+                }
+                .booking__places{
+                    @include flex($gap: 10px);
+                    .place__trip{
+                        padding: 12px 17px 12px 5px;
+                        @include flex($column: column, $gap: 10px, $x: flex-start, $y: flex-start);
+                        border-radius: 10px;
+                        border: 1.106px solid #F4F5F6;
+                        background: var(--white);
+                        box-shadow: 0px 2.213px 8.851px 0px rgba(15, 15, 15, 0.08);
+                        .place__img{
+                            width: 22px;
+                            height: 22px;
+                            flex-shrink: 0;
+                            border-radius: 50%;
+                            overflow: hidden;
+                            img{
+                                @include img;
+                            }
+                        }
+                        h3{
+                            @include txt($fs:11px, $fw:600);
+                            @include txt-truncate($line:1);
+                        }
+                        p{
+                            @include txt($fs:9px, $fw:500, $lh: 16.585px, $color: var(--grey));
+                            @include txt-truncate($line:2);
+    
+                        }
+                    }
+                    
+                }
+            
+            }
+    
+            .website__message{
+                padding: 21px 14px;
+                background-color: var(--white);
+                border-radius: 30px;
+                box-shadow: 0px 14px 40px -15px rgba(15, 15, 15, 0.08);
+                .website__admin{
+                    @include flex($gap: 10px, $x: flex-start, $y: flex-start);
+                    .admin__avt{
+                        width: 40px;
+                        height: 40px;
+                        flex-shrink: 0;
+                        background-color:#EAF0FF ;
+                        border-radius: 50%;
+                        position: relative;
+                        overflow: hidden;
+                        img{
+                            position: absolute;
+                            top: 35%;
+                        }
+                        
+                    }
+                    .admin__hi{
+                        @include flex($column: column, $gap: 4px, $x: flex-start);
+                        h4{
+                            @include txt($fs:20px, $fw:700);
+                        }
+                        p{
+                            @include txt($fs:14px, $fw:500, $lh: 20px, $color: var(--grey));
+    
+                        }
+                    }
+    
+                    
+                }
+                .website__text{
+                    width: 246px;
+                    padding: 10px;
+                    background-color: #ECECEC;
+                    border-radius: 23px;
+                    position: relative;
+                    img{
+                        @include img;
+                    }
+                    button{
+                        position: absolute;
+                        top:35%;
+                        right:2.7%;
+                        background-color:#FA8F54 ;
+                        padding: 6px 26px;
+                        border-radius: 10px;
+                        @include txt($fs:14px, $fw:500, $lh: 20px, $color: var(--white));
+    
+                    }
+                    .button__arrow{
+                        position: absolute;
+                        top:29.8%;
+                        right: 26.8%;
+                        flex-shrink: 0;
+    
+                    }
+                }
+            }
+        }
+        .works{
+            padding: 50px 56px;
+            @include flex($gap:31px, $y: space-between , $x: flex-start);
+            .works__img{
+                width: 590px;
+                height: 520px;
+                flex-shrink: 0;
+                position: relative;
+                .work__planner{
+                    padding: 15px;
+                    border-radius: 16px;
+                    background: var(--white);
+                    box-shadow: 0px 40px 126px -10px rgba(0, 0, 0, 0.10);
+                    @include flex($column: column,  $gap: 12px);
+                    position: absolute;
+                    top: 1%;
+                    right: 19.6%;
+                    z-index: 1;
+    
+                    .planner__heading{
+                        @include flex($y: space-between);
+                        .logo{
+                            padding: 12px 14px;
+                            border-radius: 18px;
+                            background:  #EBF1FF;
+                            flex-shrink: 0;
+                        }
+                        h3{
+                            margin-left: 15px;
+                            @include txt($fs: 18px, $fw: 600, $lh: 28px);
+                            margin-right: 34px;
+                        }
+                        .down{
+                            width: 24px;
+                            height: 24px;
+                            flex-shrink: 0;
+    
+                        }
+    
+                        
+                    }
+                    .planner__img{
+                        overflow: hidden;
+                        border-radius: 16px;
+                        width: 260px;
+                        height: 247px;
+                        flex-shrink: 0;
+                        img{
+                            @include img;
+                        }
+                    }
+                    .planner__follow{
+                        width: 100%;
+                        margin-top: -13px;
+                        @include flex($y: space-between);
+                        .follower{
+                            @include flex;
+                            .fl__avt{
+                                @include flex;
+                                .avt1{
+                                    border-radius: 30px;
+                                    border: 2px solid var(--white);
+                                    width: 28.444px;
+                                    height: 28.444px;
+                                    overflow: hidden;
+                                    flex-shrink: 0;
+                                }
+                                .avt2{
+                                    border-radius: 30px;
+                                    border: 2px solid var(--white);
+                                    width: 28.444px;
+                                    height: 28.444px;
+                                    overflow: hidden;
+                                    flex-shrink: 0;
+                                    margin-left: -5px;
+                                    
+                                }
+                                .avt3{
+                                    border-radius: 30px;
+                                    border: 2px solid var(--white);
+                                    width: 28.444px;
+                                    height: 28.444px;
+                                    overflow: hidden;
+                                    flex-shrink: 0;
+                                    margin-left: -5px;   
+                                }
+                            }
+                            a{
+                                @include inline-block;
+                                @include a($fs: 12px, $fw: 500, $lh: normal, $color: var(--grey));
+                                margin-left: 14px;
+                            }     
+                        }
+                        button{
+                            padding: 10px 30px;
+                            background-color: var(--blue);
+                            border-radius: 10px;
+                            @include txt($fs: 12px, $fw: 500, $lh: normal, $color: var(--white));
+                        }
+                    }
+                }
+                .work__profile{
+                    padding: 23px 16px;
+                    @include flex($column: column, $gap: 9px);
+                    border-radius: 20px;
+                    background: var(--white);
+                    box-shadow: 0px 12px 120px -10px rgba(0, 0, 0, 0.08);
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    .profile__info{
+                        @include flex($column: column, $gap: 14px);
+                        .avt{
+                            width: 80px;
+                            height: 80px;
+                            flex-shrink: 0;
+                            position: relative;
+                            img{
+                                border-radius: 50%;
+    
+                            }
+                            .drop{  
+                                position: absolute;
+                                bottom: 0;
+                                right: 18.75%;
+                                width: 14px;
+                                height: 14px;
+                                flex-shrink: 0;
+                                background-color: #58C27D;
+                                border-radius: 50%;
+                                border: 2px solid var(--white);
+                                z-index:1 ;
+                            }
+                        }
+                        .profile__name{
+                            @include inline-block;
+                            text-align: center;
+                            h4{
+                                @include txt($fs: 18px, $fw: 500, $lh: 28px, $color: var(--dark1));
+                                @include txt-truncate($line:1);
+                                margin-bottom: 6px;
+    
+                            }
+                            p{
+                                @include txt($fs: 12px, $fw: 400, $lh: normal, $color: var(--grey2));
+                                @include txt-truncate($line:1);
+                            }
+                        }
+                        .social{
+                            @include flex($gap:3px);
+                            a{
+                                @include inline-block;
+                                width: 16px;
+                                height: 16px;
+                                flex-shrink: 0;
+                                img{
+                                    @include img;
+                                }
+                            }
+                        }
+                        
+                    }
+                    button{
+                        width: 184px;
+                        padding: 10px 30px;
+                        background-color: var(--blue);
+                        border-radius: 10px;
+                        @include txt($fs: 12px, $fw: 500, $lh: normal, $color: var(--white));
+                    }
+                    
+                }
+                
+                .work__travellers{
+                    overflow: hidden;
+                    padding: 12px 21px;
+                    position: absolute;
+                    right: 0;
+                    top: 20.3%;
+                    z-index: 1;
+                    border-radius: 14px;
+                    background: var(--white);
+                    box-shadow: 0px 60px 120px 0px rgba(0, 0, 0, 0.10);
+                    h4{
+                        @include txt($fs: 16px, $fw: 500, $lh: 24px, $color: var(--dark1));
+                       margin-bottom: 11px;
+                    }
+                    .traveller{
+                        .tv__avt{
+                            @include flex($y: flex-start);
+                            .avt1{
+                                width: 32px;
+                                height: 32px;
+                                flex-shrink: 0;
+                                border-radius: 30px;
+                                border: 2px solid var(--white);
+                                overflow: hidden;
+                                img{
+                                    @include img;
+                                }
+                            }
+                            .avt2{
+                                width: 32px;
+                                height: 32px;
+                                flex-shrink: 0;
+                                border-radius: 30px;
+                                border: 2px solid var(--white);
+                                overflow: hidden;
+                                margin-left: -5px;
+                                img{
+                                    @include img;
+                                }
+                            }
+                            .avt3{
+                                width: 32px;
+                                height: 32px;
+                                flex-shrink: 0;
+                                border-radius: 30px;
+                                border: 2px solid var(--white);
+                                overflow: hidden;
+                                margin-left: -5px;
+                                img{
+                                    @include img;
+                                }
+                            }
+                            .avt4{
+                                width: 32px;
+                                height: 32px;
+                                flex-shrink: 0;
+                                border-radius: 30px;
+                                border: 2px solid var(--white);
+                                overflow: hidden;                            
+                                margin-left: -5px;
+                                img{
+                                    @include img;
+                                }
+                            }
+                            .avt5{
+                                width: 32px;
+                                height: 32px;
+                                flex-shrink: 0;
+                                border-radius: 30px;
+                                border: 2px solid var(--white);
+                                overflow: hidden;                            
+                                margin-left: -5px;
+                                img{
+                                    @include img;
+                                }
+                            }
+                        }
+                    }
+                
+                }
+            }
+            .works__how{
+                @include flex($column: column, $x: flex-start, $gap: 20px);
+                .works__heading{
+                    h1{
+                        @include txt($fs: 30px, $fw: 700, $lh: 60px, $color: var(--dark1));
+                        @include txt-truncate($line:1);
+                        letter-spacing: -0.4px;
+                        margin-bottom: 12px;
+                        
+                    }
+                    p{
+                        @include txt($fs: 14px, $fw: 400, $lh: 32px, $color: var(--dark));
+                        @include txt-truncate($line:3);
+                        
+                    }
+                }
+                .works__select{
+                    padding-right: 10px;
+                    @include flex($column: column, $x: flex-start, $gap: 10px);
+                    .work__select1{
+                        @include flex( $x: flex-start, $gap: 12px);
+                        .select__icon{
+                            padding: 7px;
+                            flex-shrink: 0;
+                            border-radius: 30px;
+                            box-shadow: 0px 20px 80px 0px rgba(0, 0, 0, 0.12);
+                            img{
+                                @include img;
+                            }
+                        }
+                        .select__name{
+                            @include flex($column: column, $x: flex-start, $y:flex-start, $gap: 5px);
+                            h4{
+                                @include txt($fs: 16px, $fw: 500, $lh: 36px, $color: var(--dark));
+                                @include txt-truncate($line:1);
+                            }
+                            p{
+                                @include txt($fs: 12px, $fw: 400, $lh: 24px, $color: var(--grey));
+                                @include txt-truncate($line:2);
+                            }
+                            
+                        }
+                    
+                    }
+                    
+                }
+    
+            }
+    
+        }
+        .services{
+            padding: 50px 100px;
+            background-color: var(--blue);
+            @include flex($column: column, $gap: 30px);
+            .services__heading{
+                
+                @include flex($column: column, $gap: 7px);
+                h1{
+                    @include txt($fs:30px , $fw:700, $lh: 60px, $color: var(--white), $txt-tranf: capitalize    );
+                    @include txt-truncate($line:1);
+                    letter-spacing: -0.4px;
+                }
+                p{
+                    @include txt($fs:14px , $fw:400, $lh: 32px, $color: #F4F5F6    );
+                    @include txt-truncate($line:1);
+                    text-align: center;
+    
+                }
+            }
+    
+            .service{
+                @include flex($gap:18px);
+                .service__item{
+                    padding: 17px 20px 7px 20px;
+                    background-color: var(--white);
+                    border-radius: 8px;
+                    @include flex($column: column, $gap: 18px);
+                    .icon{
+                        width: 34px;
+                        height: 34px;
+                        border-radius: 6px;
+                        @include flex;
+                        flex-shrink: 0;
+                    }   
+                    .achive{
+                        @include flex($column: column);
+                        p{
+                            @include txt($fs:18px , $fw:700, $lh: 36px, $color: var(--dark)   );
+                            @include txt-truncate($line:1);
+                        }
+                        small{
+                            @include txt($fs:14px , $fw:400, $lh: 30px, $color: var(--grey)   );
+                            @include txt-truncate($line:1);
+    
+                        }
+    
+                    }
+                }
+    
+    
+            }
+        }
+        .discover{
+            padding:50px 86px;
+            @include flex($column: column, $gap: 34px);
+            .discover__heading{
+                h1{
+                    @include txt($fs:30px , $fw:700, $lh: 60px, $color: var(--dark1)   );
+                    letter-spacing: -0.4px;
+                    @include txt-truncate($line:1);
+                }
+            }   
+            .discover__features{
+                @include flex($column: column, $gap:26px);
+                .feature__top{
+                    @include flex($y: space-between, $gap:217px);
+                    .feature__item{
+                        @include flex($column: column, $x: flex-start, $gap:10px);
+                        .item__heading{
+                            @include flex( $gap:10px);
+                            .icon{
+                                @include flex;
+                                width: 34px;
+                                height: 34px;
+                                flex-shrink: 0;
+                                border-radius: 6px;                        
+                            }
+                            h2{
+                                @include txt($fs:22px , $fw:600, $lh: 45px, $color: var(--dark1)   );
+                                @include txt-truncate($line:1);
+                            }
+                            
+                        }
+                        p{
+                            @include txt($fs:14px , $fw:400, $lh: 32px, $color: var(--dark)   );
+                            @include txt-truncate($line:2);
+    
+                        }
+                        
+                    }
+                
+                }
+                .feature__right{
+                    @include flex($y: space-between, $gap:152px);
+                    .feature__item{
+                        @include flex($column: column, $x: flex-start, $gap:20px);
+                        .item__heading{
+                            @include flex( $gap:16px);
+                            .icon{
+                                @include flex;
+                                width: 34px;
+                                height: 34px;
+                                flex-shrink: 0;
+                                border-radius: 6px;                        
+                            }
+                            h2{
+                                @include txt($fs:22px , $fw:600, $lh: 45px, $color: var(--dark1)   );
+                                @include txt-truncate($line:1);
+                            }
+                            
+                        }
+                        p{
+                            @include txt($fs:14px , $fw:400, $lh: 32px, $color: var(--dark)   );
+                            @include txt-truncate($line:2);
+    
+                        }
+                        
+                    }
+                
+                }
+            }
+    
+        }
+        .ready{ 
+            padding: 50px 86px 0 86px ;
+            background: rgba(251, 246, 199, 0.80);
+            @include flex($y: space-between, $gap: 101px, $x: flex-start);
+            .ready__heading{
+                @include flex($column: column, $gap: 24px, $x: flex-start);
+                padding-top: 25px;
+                h1{
+                    @include txt($fs:30px , $fw:700, $lh: 50px, $color: var(--dark1)   );
+                    letter-spacing: -0.4px;
+                    @include txt-truncate($line:2);
+                }
+                p{
+                    @include txt($fs:14px , $fw:400, $lh: 32px, $color: var(--dark)   );
+                    @include txt-truncate($line:3);
+                }
+                button{
+                    padding: 9px 29px 8px 28px;
+                    border-radius: 6px;
+                    background: var(--blue);
+                    @include txt($fs:14px , $fw:700, $lh: 21px, $color: var(--white)   );
+    
+                }
+            }
+    
+            .ready__for{
+                position: relative;
+                .ready__img{
+                    height: 470px;
+                    padding-left: 24px;
+                    padding-right: 40.12px;
+                    @include flex($x: flex-start);
+                    .img1{
+                        width: 170.7px;
+                        height: 401.767px;
+                        img{
+                            @include img;
+                        }
+                    }
+                    .img2{
+                        width: 205.177px;
+                        height: 342.89px;
+                        img{
+                            @include img;
+                        }
+                    }
+                    
+                }
+                .check__plan{
+                    width: 100%;
+                    position: absolute;
+                    right: 0;
+                    bottom:0;
+                    padding: 30px 36px;
+                    @include flex($column: column, $gap: 16px, $x: flex-start);
+                    background-color: var(--white);
+                    border-radius: 24px 24px 0px 0px;
+                    .check__item{
+                        width: 100%;
+                        padding: 10px 14px;
+                        @include flex($y: space-between);
+                        border-radius: 10px;
+                        border: 0.5px solid #D3D3D3;
+                        background: var(--white);
+                        transition: all .2s ease;
+                        cursor: pointer;
+                        .item__left{
+                            @include flex($y: flex-start, $gap: 10px);
+                            .img{
+                                @include flex;
+                                width: 32px;
+                                height: 32px;
+                                flex-shrink: 0;
+                                border-radius: 9px;
+                                background: var(--primary-blue-20, #D8E3FF);
+                            }
+                            .plan{
+                                @include flex($column: column, $gap: 5px, $x: flex-start);
+                                h2{
+                                    @include txt($fs:12px , $fw:500, $lh: normal, $color: var(--dark)   );
+                                    @include txt-truncate($line:1);
+                                }
+                                .customer{
+                                    @include flex( $gap: 6px, $x: flex-start);
+                                    .avt{
+                                        width: 10px;
+                                        height: 10px;
+                                        flex-shrink: 0;
+                                        border-radius: 50%;   
+                                        overflow: hidden;
+                                    }
+                                    a{
+                                        @include a($fs:8px , $fw:500, $lh: normal, $color: var(--grey));
+                                        @include txt-truncate($line:1);
+                                    }
+                                    span{
+                                        @include inline-block;
+                                        margin-left: 4px;
+                                        padding: 2px 7px 2px 6px;
+                                        border-radius: 3px;
+                                        background-color: #F4F5F9;
+                                        @include txt($fs:6px , $fw:500, $lh: normal, $color: #FF6370);
+                                    }
+                                }
+                            }
+                        }
+                        &:hover{
+                            box-shadow: 0px 4px 10px 0px rgba(15, 15, 15, 0.12);
+                        }  
+                    }
+                    button{
+                        padding: 6px 8px 6px 7px;
+                        background-color: #FEE9DD;
+                        border-radius: 4px;
+                        @include txt($fs:7px , $fw:500, $lh: normal, $color: #FA8F54);
+                    }
+                }
+            }
+        }
+        .footer{
+            padding: 38px 70px;
+            @include flex($column: column);
+            
+            .footer__top{
+                padding: 0 15px ;
+    
+                @include flex( $gap: 72px, $x: flex-start);
+                .footer__company{
+                    @include flex($column: column, $gap: 30px, $x: flex-start);
+                    .company__logo{
+                        margin-bottom: 10px;
+                        @include flex($gap:15px);
+                        a{
+                            @include inline-block;
+                            padding: 8px 10px ;
+                            border-radius: 12px;
+                            background: var(--blue);
+                        }
+                        .bgr--white{
+                            background-color: var(--white);
+                            padding: 0;
+                            @include a($fs: 20px, $fw:800, $lh: normal, $color: var(--dark));
+                        }
+                    }
+                    p{
+                        @include txt($fs: 14px, $fw:400, $lh: 24px, $color: var(--dark));
+                        // @include txt-truncate($line:3);
+                    }
+                    .footer__email{
+                        @include flex;
+                        padding: 8px 8px 8px 26px;
+                        border-radius: 24px;
+                        border: 2px solid var(--grey3);
+                        input[type ="search"]{
+                            border: none;
+                            @include txt($fs: 14px, $fw:500, $lh: 24px, $color: var(--grey3));
+                            &:focus{
+                                border: none;
+                                color: var(--dark);
+                                opacity: 0.5;
+                            }
+                        }
+                        .arrow{
+                            padding: 10px;
+                            width: 33px;
+                            height: 33px;
+                            border-radius: 30px;
+                            background: var(--blue);
+                            overflow: hidden;
+                            img{
+                                @include img;
+                                transform: scale(2);
+                            }
+                        }
+                    }
+                }
+                .footer__services{
+                    @include flex($column: column, $gap: 14px, $x: flex-start);
+                    h1{
+                        @include txt($fs: 20px, $fw:500, $lh: 36px, $color: var(--dark));
+                        margin-bottom: 6px;
+                    }
+                    a{
+                        @include a($fs: 14px, $fw:400, $lh: 24px, $color: var(--grey));
+                        white-space: nowrap;
+                        &:hover{
+                            color: var(--blue);
+    
+                        }
+                    }
+    
+                }
+                
+                .footer__support{
+                    @include flex($column: column, $gap: 14px, $x: flex-start);
+                    h1{
+                        @include txt($fs: 20px, $fw:500, $lh: 36px, $color: var(--dark));
+                        margin-bottom: 6px;
+                    }
+                    a{
+                        @include a($fs: 14px, $fw:400, $lh: 24px, $color: var(--grey));
+                        white-space: nowrap;
+                        &:hover{
+                            color: var(--blue);
+    
+                        }
+                    }
+                }
+                .footer__business{
+                    @include flex($column: column, $gap: 14px, $x: flex-start);
+                    h1{
+                        @include txt($fs: 20px, $fw:500, $lh: 36px, $color: var(--dark));
+                        margin-bottom: 6px;
+                    }
+                    a{
+                        @include a($fs: 14px, $fw:400, $lh: 24px, $color: var(--grey));
+                        white-space: nowrap;
+                        &:hover{
+                            color: var(--blue);
+    
+                        }
+                    }
+                }
+            }
+            .footer__line{
+                height: 1px;
+                width: 100%;
+                margin-top: 51px;
+                margin-bottom: 30px;
+                background-color: var(--grey3);
+            }
+            .footer__bottom{
+                width: 100%;
+                @include flex($y: space-between);
+                span{   
+                    @include a($fs: 12px, $fw:400, $lh: 20px, $color: var(--grey2));
+                }
+                .footer__social{
+                    @include flex($gap:14px);
+                    a{
+                        @include inline-block;
+                        padding: 2px;
+                    }
+                
+                }
+            }
+        }
+    }
+    
 }
 
