@@ -1381,7 +1381,8 @@
         .header {
             .header__bottom {
                 width: 100%;
-                height: 645px;
+                height: 423px;
+                overflow: hidden;
                 position: relative;
                 .ormament {
                     display: none;
@@ -1397,18 +1398,20 @@
                     top: 53.96%;
                     left: 0;
                     transform: rotate(-19.16 deg);
+                    z-index: 3;
                 }
                 .travel {
-                    @include flex($column: column, $x: flex-start, $gap: 70px, $y: flex-start);
+                    width: 400px;
+                    @include flex($column: column, $x: flex-start, $gap: 48px, $y: flex-start);
                     position: absolute;
                     left: 7.36%;
                     z-index: 2;
                     .travel__top {
                         margin-top: 6.83px;
                         .travel__heading {
-                            margin-bottom: 30px;
+                            margin-bottom: 22px;
                             h1 {
-                                @include txt($fs: 64px, $fw: 800, $lh: normal, $color: var(--dark), $txt-tranf: capitalize);
+                                @include txt($fs: 48px, $fw: 800, $lh: normal, $color: var(--dark), $txt-tranf: capitalize);
                                 @include txt-truncate($line: 2);
                                 span {
                                     color: #f5b318;
@@ -1417,24 +1420,24 @@
                         }
                         p {
                             @include inline-block;
-                            @include txt($fs: 18px, $fw: 500, $lh: 28px, $color: var(--grey));
+                            @include txt($fs: 14px, $fw: 500, $lh: 21px, $color: var(--grey));
                             @include txt-truncate($line: 2);
-                            margin-bottom: 40px;
+                            margin-bottom: 30px;
                         }
                         .plan__trip {
-                            width: 317px;
-                            padding: 8px 8px 8px 44px;
-                            @include flex($gap: 111px, $y: space-between);
+                            width: 237px;
+                            padding: 6px 6px 6px 33px;
+                            @include flex($y: space-between);
                             border-radius: 31px;
                             background: var(--white);
                             box-shadow: -16px 22px 42px 0px rgba(0, 31, 77, 0.12);
                             button {
-                                @include txt($fs: 20px, $fw: 700, $lh: normal, $color: var(--dark));
+                                @include txt($fs: 15px, $fw: 700, $lh: normal, $color: var(--dark));
                                 white-space: nowrap;
                             }
                             a {
                                 @include inline-block;
-                                padding: 10px;
+                                padding: 5px;
                                 background-color: var(--blue);
                                 border-radius: 30px;
                             }
@@ -1443,18 +1446,18 @@
                     .travel__bottom {
                         @include flex($column: column, $gap: 10px, $x: flex-start);
                         p {
-                            @include txt($fs: 16px, $fw: 500, $lh: 24px, $color: var(--grey));
+                            @include txt($fs: 12px, $fw: 500, $lh: 24px, $color: var(--grey));
                         }
                         .travel__recomment {
-                            @include flex($x: flex-end);
+                            @include flex($x: flex-start);
                             .recomment {
                                 @include flex($column: column, $gap: 7px, $x: flex-start);
                                 h4 {
-                                    @include txt($fs: 24px, $fw: 500, $lh: 36px, $color: var(--dark2));
+                                    @include txt($fs: 18px, $fw: 500, $lh: 36px, $color: var(--dark2));
                                 }
                                 .recomment__star {
-                                    width: 106px;
-                                    height: 18px;
+                                    width: 77px;
+                                    height: 14px;
                                     img {
                                         @include img;
                                     }
@@ -1462,18 +1465,18 @@
                             }
                             .jamb {
                                 width: 1px;
-                                height: 52px;
+                                height: 42px;
                                 flex-shrink: 0;
                                 background-color: var(--grey3);
                                 margin: 0 14px 0 24px;
                             }
                             .num__reveiw {
-                                @include flex($column: column, $x: flex-start, $y: flex-end);
+                                @include flex($column: column, $x: flex-start, $y: flex-start);
                                 span {
-                                    @include txt($fs: 24px, $fw: 700, $lh: 36px, $color: var(--blue));
+                                    @include txt($fs: 18px, $fw: 700, $lh: 36px, $color: var(--blue));
                                 }
                                 small {
-                                    @include txt($fs: 12px, $fw: 500, $lh: normal, $color: var(--grey));
+                                    @include txt($fs: 9px, $fw: 500, $lh: normal, $color: var(--grey));
                                     strong {
                                         font-weight: 700;
                                     }
@@ -1483,8 +1486,8 @@
                     }
                 }
                 .travel__img1 {
-                    width: 769px;
-                    height: 645px;
+                    width: 576px;
+                    height: 483px;
                     position: absolute;
                     flex-shrink: 0;
                     right: 0;
@@ -1504,21 +1507,27 @@
                     
                 }
                 .travel__img3 {
+                    width: 640px;
+                    height: 423px;
                     flex-shrink: 0;
                     position: absolute;
-                    top: -16.5%;
+                    top: 0%;
                     right: 0;
-    
+                    img{
+                        @include img;
+                    }
+                    
                 }
                 .live {
-                    width: 136px;
-                    height: 196px;
+                    width: 102px;
+                    height: 147px;
                     position: absolute;
                     right: 30.69%;
                     bottom: 2.9%;
                     z-index: 1;
                     img{
                         @include img;
+
                     }
                 }
             }
@@ -2649,7 +2658,8 @@
         .header {
             .header__bottom {
                 width: 100%;
-                height: 645px;
+                height: 323px;
+                overflow: hidden;
                 position: relative;
                 .ormament {
                     display: none;
@@ -2657,26 +2667,28 @@
                     height: 20px;
                     flex-shrink: 0;
                     position: absolute;
-                    top: 20.4%;
-                    left: 34.08%;
+                    top: 19.4%;
+                    left: 41.08%;
                 }
                 .eliment {
                     position: absolute;
                     top: 53.96%;
                     left: 0;
                     transform: rotate(-19.16 deg);
+                    z-index: 3;
                 }
                 .travel {
-                    @include flex($column: column, $x: flex-start, $gap: 70px, $y: flex-start);
+                    width: 300px;
+                    @include flex($column: column, $x: flex-start, $gap: 32px, $y: flex-start);
                     position: absolute;
                     left: 7.36%;
                     z-index: 2;
                     .travel__top {
                         margin-top: 6.83px;
                         .travel__heading {
-                            margin-bottom: 30px;
+                            margin-bottom: 11px;
                             h1 {
-                                @include txt($fs: 64px, $fw: 800, $lh: normal, $color: var(--dark), $txt-tranf: capitalize);
+                                @include txt($fs: 32px, $fw: 800, $lh: normal, $color: var(--dark), $txt-tranf: capitalize);
                                 @include txt-truncate($line: 2);
                                 span {
                                     color: #f5b318;
@@ -2685,44 +2697,45 @@
                         }
                         p {
                             @include inline-block;
-                            @include txt($fs: 18px, $fw: 500, $lh: 28px, $color: var(--grey));
+                            @include txt($fs: 10px, $fw: 500, $lh: 21px, $color: var(--grey));
                             @include txt-truncate($line: 2);
-                            margin-bottom: 40px;
+                            margin-bottom: 20px;
                         }
                         .plan__trip {
-                            width: 317px;
-                            padding: 8px 8px 8px 44px;
-                            @include flex($gap: 111px, $y: space-between);
+                            width: 237px;
+                            padding:4px 4px 4px 22px;
+                            @include flex($y: space-between);
                             border-radius: 31px;
                             background: var(--white);
                             box-shadow: -16px 22px 42px 0px rgba(0, 31, 77, 0.12);
                             button {
-                                @include txt($fs: 20px, $fw: 700, $lh: normal, $color: var(--dark));
+                                @include txt($fs: 10px, $fw: 700, $lh: normal, $color: var(--dark));
                                 white-space: nowrap;
                             }
                             a {
                                 @include inline-block;
-                                padding: 10px;
+                                padding: 0;
                                 background-color: var(--blue);
                                 border-radius: 30px;
+                                    
                             }
                         }
                     }
                     .travel__bottom {
-                        @include flex($column: column, $gap: 10px, $x: flex-start);
+                        @include flex($column: column, $gap: 6px, $x: flex-start);
                         p {
-                            @include txt($fs: 16px, $fw: 500, $lh: 24px, $color: var(--grey));
+                            @include txt($fs: 8px, $fw: 500, $lh: 16px, $color: var(--grey));
                         }
                         .travel__recomment {
-                            @include flex($x: flex-end);
+                            @include flex($x: flex-start);
                             .recomment {
-                                @include flex($column: column, $gap: 7px, $x: flex-start);
+                                @include flex($column: column, $gap: 4px, $x: flex-start);
                                 h4 {
-                                    @include txt($fs: 24px, $fw: 500, $lh: 36px, $color: var(--dark2));
+                                    @include txt($fs: 12px, $fw: 500, $lh: 36px, $color: var(--dark2));
                                 }
                                 .recomment__star {
-                                    width: 106px;
-                                    height: 18px;
+                                    width: 58px;
+                                    height: 10px;
                                     img {
                                         @include img;
                                     }
@@ -2730,18 +2743,18 @@
                             }
                             .jamb {
                                 width: 1px;
-                                height: 52px;
+                                height: 32px;
                                 flex-shrink: 0;
                                 background-color: var(--grey3);
                                 margin: 0 14px 0 24px;
                             }
                             .num__reveiw {
-                                @include flex($column: column, $x: flex-start, $y: flex-end);
+                                @include flex($column: column, $x: flex-start, $y: flex-start);
                                 span {
-                                    @include txt($fs: 24px, $fw: 700, $lh: 36px, $color: var(--blue));
+                                    @include txt($fs: 12px, $fw: 700, $lh: 24px, $color: var(--blue));
                                 }
                                 small {
-                                    @include txt($fs: 12px, $fw: 500, $lh: normal, $color: var(--grey));
+                                    @include txt($fs: 6px, $fw: 500, $lh: normal, $color: var(--grey));
                                     strong {
                                         font-weight: 700;
                                     }
@@ -2751,10 +2764,10 @@
                     }
                 }
                 .travel__img1 {
-                    flex-shrink: 0;
-                    width: 769px;
-                    height: 645px;
+                    width: 387px;
+                    height: 322px;
                     position: absolute;
+                    flex-shrink: 0;
                     right: 0;
                     z-index: 1;
                     img{
@@ -2772,25 +2785,31 @@
                     
                 }
                 .travel__img3 {
+                    width: 387px;
+                    height: 323px;
                     flex-shrink: 0;
                     position: absolute;
-                    top: -4.8%;
+                    top: 0%;
                     right: 0;
-    
+                    img{
+                        @include img;
+                    }
+                    
                 }
                 .live {
-                    display: none;
-                    width: 136px;
-                    height: 196px;
+                    width: 102px;
+                    height: 147px;
                     position: absolute;
                     right: 30.69%;
                     bottom: 2.9%;
                     z-index: 1;
                     img{
                         @include img;
+
                     }
                 }
             }
+            
         }
         .company {
             padding: 24px 42px;
